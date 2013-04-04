@@ -10,7 +10,7 @@ Requirements
 
 Usage
 -----
-Just include `websites` in your node's `run_list`:
+Include `websites` in your node's `run_list`:
 
 ```json
 {
@@ -18,6 +18,19 @@ Just include `websites` in your node's `run_list`:
   "run_list": [
     "recipe[websites]"
   ]
+}
+```
+
+Now you can create a data_bag named websites containing ```.json``` files that look like the following example:
+
+```json
+{
+    "id": "default",
+    "host": "app.local",
+    "aliases": [
+        "app.dev"
+    ],
+    "docroot": "/var/www/app/public""
 }
 ```
 
