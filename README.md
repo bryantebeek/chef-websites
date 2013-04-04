@@ -8,6 +8,23 @@ Requirements
 #### packages
 - `apache2` - The configurations are created for apache2.
 
+Attributes
+----------
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Default</th>
+  </tr>
+  <tr>
+    <td><tt>['websites']['default']</tt></td>
+    <td>Boolean</td>
+    <td>Whether apache's default site should be enabled</td>
+    <td><tt>false</tt></td>
+  </tr>
+</table>
+
 Usage
 -----
 Include `websites` in your node's `run_list`:
@@ -30,7 +47,7 @@ Now you can create a data_bag named websites containing ```.json``` files that l
     "aliases": [
         "app.dev"
     ],
-    "docroot": "/var/www/app/public""
+    "docroot": "/var/www/app/public"
 }
 ```
 
